@@ -1,0 +1,455 @@
+// TODO: refactor this variables and create new file
+// Variables
+$gp-white: #fff;
+$gp-black: #000;
+$gp-orange: #F97231;
+$gp-dark: #3C3D3B;
+$gp-green: #BAD3A5;
+$gp-heading-font: 'Poppins', sans-serif;
+
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/share-badge';
+
+// global
+.container-main {
+	padding-bottom: 0;
+}
+
+button {
+	outline: none;
+	border: none;
+}
+
+// Home hero block
+// TODO: create style for responsive
+.cms-block-home-hero {
+	.home-hero {
+		&__container {
+			max-width: 1440px;
+			padding: 0 40px;
+			margin: 0 auto;
+		}
+
+		&__image {
+
+			&-wrapper {
+				position: relative;
+				margin-right: 80px;
+				background-color: $gp-white;
+				border-radius: 40px;
+
+				.cms-element-image {
+					padding: 15px;
+
+					img {
+						border-radius: 40px;
+					}
+				}
+			}
+		}
+
+		&__text {
+			&-wrapper {}
+
+			&-column {
+				position: relative;
+			}
+
+			&-subtitle {
+				span {
+					color: #F97231;
+					color: $gp-orange;
+					font-family: Poppins;
+					font-size: 16px;
+					font-style: normal;
+					font-weight: 400;
+					line-height: 28px;
+				}
+			}
+
+			&-title {
+				color: $gp-black;
+				font-family: Poppins;
+				font-size: 40px;
+				line-height: 129%;
+				position: relative;
+				margin-bottom: 40px;
+
+				&::after {
+					content: "";
+					position: absolute;
+					bottom: -20px;
+					width: 200px;
+					height: 2px;
+					background-color: $gp-orange;
+				}
+
+				b {
+					font-size: 60px
+				}
+			}
+
+			&-paragraph {
+				color: $gp-black;
+				font-family: Poppins;
+				font-size: 16px;
+				font-style: normal;
+				font-weight: 500;
+				line-height: 175%;
+			}
+
+			&-animation {
+				color: $gp-white;
+				font-family: Poppins;
+				font-size: 40px;
+				font-weight: 600;
+				line-height: 115.92%;
+				padding: 40px 0;
+
+				&-label {
+					@media screen and (min-width: 992px) {
+						padding-left: 40px;
+					}
+				}
+			}
+		}
+
+		&__badge {
+			object-fit: contain;
+			width: 165px;
+			height: 165px;
+			object-position: center;
+
+			&-wrapper {
+				background-color: $gp-white;
+				padding: 15px;
+				border-radius: 100%;
+				position: absolute;
+				right: -80px;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+		}
+
+		&__ornament {
+			position: absolute;
+			z-index: 3;
+			bottom: -20px;
+			right: 0;
+			transform: translateX(30%);
+			width: 340px;
+			height: auto;
+			object-fit: contain;
+			object-position: center;
+		}
+
+		&__bottom {
+			position: relative;
+			margin-top: -80px;
+
+			&::before {
+				position: absolute;
+				content: "";
+				width: 100vw;
+				height: 100%;
+				left: 50%;
+				transform: translateX(-50%);
+				z-index: -1;
+				background-color: $gp-orange;
+			}
+		}
+	}
+
+}
+
+// Products listing element
+.cms-block-gp-product {
+	background: $gp-orange;
+}
+
+.gp-products__lists {
+	max-width: 1440px;
+	padding: 0 40px;
+	margin: 0 auto;
+}
+
+.gp-products__item-link,
+.gp-products__item-link:hover {
+	color: black;
+	text-decoration: none;
+}
+
+.gp-products__item-wrapper {
+	max-width: 80%;
+	background: white;
+	padding-left: 28px;
+	padding-right: 28px;
+	padding-top: 30px;
+	padding-bottom: 120px;
+	margin: 0 auto;
+	position: relative;
+	min-height: 250px;
+	border-radius: 19px;
+}
+
+.gp-products__item-grid {
+	display: flex;
+	justify-content: space-between;
+}
+
+.gp-products__item-name {
+	color: #000;
+	font-family: Poppins;
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100.636%;
+	/* 25.159px */
+	letter-spacing: -0.75px;
+	margin-bottom: 8px;
+}
+
+.gp-products__item-detail {
+	color: #ACABAB;
+	font-family: Poppins;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100.636%;
+	/* 15.095px */
+	letter-spacing: -0.45px;
+}
+
+.gp-products__item-price {
+	color: #8A8888;
+	font-family: Poppins;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100.636%;
+	/* 20.127px */
+	letter-spacing: -0.6px;
+}
+
+.gp-products__item-button {
+	color: #FFF;
+	font-family: Poppins;
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 100.636%;
+	/* 15.095px */
+	letter-spacing: -0.45px;
+	text-transform: uppercase;
+
+	// button{
+	background-color: $gp-orange;
+	border-radius: 25px;
+	padding: 8px;
+	outline: none;
+	border: none;
+
+}
+
+.gp-products__item-image {
+	position: relative;
+	width: 100%;
+	margin-top: -120px;
+}
+
+.gp-products__item-image img {
+	margin: 0 auto;
+}
+
+.gp-products__item-stock {
+	position: absolute;
+	z-index: 1;
+	top: -40px;
+	right: 35px;
+	width: 70px;
+	height: 70px;
+	padding: 10px 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: $gp-dark;
+	color: $gp-white;
+	text-align: center;
+	font-family: Poppins;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 100.636%;
+	/* 13.083px */
+	letter-spacing: -0.39px;
+	border-radius: 100%;
+
+}
+
+// Image text reversed
+.image-text-reversed {
+	max-width: 1440px;
+	padding: 0 40px;
+	margin: 0 auto;
+
+	h1 {
+		font-size: 40px;
+		letter-spacing: -1.6px;
+		line-height: 56px;
+
+		span {
+			font-size: 60px;
+		}
+	}
+
+	.cms-element-text {
+		.highlight {
+			color: $gp-orange;
+			display: block;
+			font-family: Poppins;
+			font-size: 36px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 35px;
+			/* 97.222% */
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				bottom: -10px;
+				left: 0;
+				width: 120px;
+				height: 1px;
+				background-color: $gp-orange;
+			}
+		}
+	}
+
+	.cms-element-image {
+		&.justify-content-center {
+			img {
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+// Arrow down
+.arrow {
+	display: flex;
+	justify-content: center;
+
+	&--green {
+		color: #709254;
+		margin-bottom: 72px;
+	}
+
+	&-wrapper {
+		display: flex;
+		align-items: center;
+	}
+
+	&-label {
+		text-align: center;
+		font-family: Poppins;
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 115.92%;
+		/* 46.368px */
+		padding-left: 30px;
+	}
+}
+
+// Card achievements block
+.gp-achievement-card {
+	max-width: 1440px;
+	padding: 0 40px;
+	color: $gp-black;
+
+	&__item {
+		img {
+			object-fit: contain;
+			margin: 0 auto;
+
+			@media screen and (min-width: 992px) {
+				min-height: 230px;
+			}
+		}
+
+		.cms-element-text {
+			color: #000;
+			font-family: Poppins;
+			font-size: 15px;
+			line-height: 150.636%;
+			letter-spacing: -0.45px;
+
+			h3 {
+				font-size: 24px;
+				line-height: 117%;
+				letter-spacing: -0.72px;
+			}
+		}
+	}
+
+}
+
+// List achievements block
+.gp-achievement-list {
+	max-width: 1440px;
+	margin: 0 auto;
+	padding-left: 120px;
+	padding-right: 40px;
+	position: relative;
+
+	&__item {
+		margin-bottom: 24px;
+
+		&-wrapper {
+			display: flex;
+			align-items: center;
+		}
+
+		&-image {
+			width: 54px;
+			height: auto;
+			object-fit: contain;
+			margin-right: 15px;
+		}
+
+		&-content {
+			font-family: Poppins;
+			color: $gp-black;
+
+			div {
+
+				b {
+					font-size: 16px;
+				}
+			}
+		}
+	}
+
+	&__long-text {
+		color: #000;
+		font-family: Poppins;
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 28px;
+		letter-spacing: -0.64px;
+		margin-top: 50px;
+	}
+
+	&__image {
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 100%;
+		max-width: 800px;
+	}
+
+}
