@@ -11,6 +11,7 @@ $gp-heading-font: 'Poppins', sans-serif;
 @import 'components/header';
 @import 'components/footer';
 @import 'components/share-badge';
+@import 'components/home-hero';
 
 // global
 .container-main {
@@ -22,147 +23,171 @@ button {
 	border: none;
 }
 
-// Home hero block
-// TODO: create style for responsive
-.cms-block-home-hero {
-	.home-hero {
-		&__container {
-			max-width: 1440px;
-			padding: 0 40px;
-			margin: 0 auto;
-		}
-
-		&__image {
-
-			&-wrapper {
-				position: relative;
-				margin-right: 80px;
-				background-color: $gp-white;
-				border-radius: 40px;
-
-				.cms-element-image {
-					padding: 15px;
-
-					img {
-						border-radius: 40px;
-					}
-				}
-			}
-		}
-
-		&__text {
-			&-wrapper {}
-
-			&-column {
-				position: relative;
-			}
-
-			&-subtitle {
-				span {
-					color: #F97231;
-					color: $gp-orange;
-					font-family: Poppins;
-					font-size: 16px;
-					font-style: normal;
-					font-weight: 400;
-					line-height: 28px;
-				}
-			}
-
-			&-title {
-				color: $gp-black;
-				font-family: Poppins;
-				font-size: 40px;
-				line-height: 129%;
-				position: relative;
-				margin-bottom: 40px;
-
-				&::after {
-					content: "";
-					position: absolute;
-					bottom: -20px;
-					width: 200px;
-					height: 2px;
-					background-color: $gp-orange;
-				}
-
-				b {
-					font-size: 60px
-				}
-			}
-
-			&-paragraph {
-				color: $gp-black;
-				font-family: Poppins;
-				font-size: 16px;
-				font-style: normal;
-				font-weight: 500;
-				line-height: 175%;
-			}
-
-			&-animation {
-				color: $gp-white;
-				font-family: Poppins;
-				font-size: 40px;
-				font-weight: 600;
-				line-height: 115.92%;
-				padding: 40px 0;
-
-				&-label {
-					@media screen and (min-width: 992px) {
-						padding-left: 40px;
-					}
-				}
-			}
-		}
-
-		&__badge {
-			object-fit: contain;
-			width: 165px;
-			height: 165px;
-			object-position: center;
-
-			&-wrapper {
-				background-color: $gp-white;
-				padding: 15px;
-				border-radius: 100%;
-				position: absolute;
-				right: -80px;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-		}
-
-		&__ornament {
-			position: absolute;
-			z-index: 3;
-			bottom: -20px;
-			right: 0;
-			transform: translateX(30%);
-			width: 340px;
-			height: auto;
-			object-fit: contain;
-			object-position: center;
-		}
-
-		&__bottom {
-			position: relative;
-			margin-top: -80px;
-
-			&::before {
-				position: absolute;
-				content: "";
-				width: 100vw;
-				height: 100%;
-				left: 50%;
-				transform: translateX(-50%);
-				z-index: -1;
-				background-color: $gp-orange;
-			}
-		}
+// Arrow down component
+.arrow-down {
+	&--white {
+		color: white;
 	}
 
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	span {
+		text-align: center;
+
+		font-size: 40px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 115.92%;
+		/* 46.368px */
+		margin-left: 24px;
+	}
 }
+
+// Home hero block
+// TODO: create style for responsive
+// .cms-block-home-hero {
+// 	.home-hero {
+// 		&__container {
+// 			max-width: 1440px;
+// 			padding: 0 40px;
+// 			margin: 0 auto;
+// 		}
+
+// 		&__image {
+
+// 			&-wrapper {
+// 				position: relative;
+// 				margin-right: 80px;
+// 				background-color: $gp-white;
+// 				border-radius: 40px;
+
+// 				.cms-element-image {
+// 					padding: 15px;
+
+// 					img {
+// 						border-radius: 40px;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		&__text {
+// 			&-wrapper {}
+
+// 			&-column {
+// 				position: relative;
+// 			}
+
+// 			&-subtitle {
+// 				span {
+// 					color: #F97231;
+// 					color: $gp-orange;
+// 					font-family: Poppins;
+// 					font-size: 16px;
+// 					font-style: normal;
+// 					font-weight: 400;
+// 					line-height: 28px;
+// 				}
+// 			}
+
+// 			&-title {
+// 				color: $gp-black;
+// 				font-family: Poppins;
+// 				font-size: 40px;
+// 				line-height: 129%;
+// 				position: relative;
+// 				margin-bottom: 40px;
+
+// 				&::after {
+// 					content: "";
+// 					position: absolute;
+// 					bottom: -20px;
+// 					width: 200px;
+// 					height: 2px;
+// 					background-color: $gp-orange;
+// 				}
+
+// 				b {
+// 					font-size: 60px
+// 				}
+// 			}
+
+// 			&-paragraph {
+// 				color: $gp-black;
+// 				font-family: Poppins;
+// 				font-size: 16px;
+// 				font-style: normal;
+// 				font-weight: 500;
+// 				line-height: 175%;
+// 			}
+
+// 			&-animation {
+// 				color: $gp-white;
+// 				font-family: Poppins;
+// 				font-size: 40px;
+// 				font-weight: 600;
+// 				line-height: 115.92%;
+// 				padding: 40px 0;
+
+// 				&-label {
+// 					@media screen and (min-width: 992px) {
+// 						padding-left: 40px;
+// 					}
+// 				}
+// 			}
+// 		}
+
+// 		&__badge {
+// 			object-fit: contain;
+// 			width: 165px;
+// 			height: 165px;
+// 			object-position: center;
+
+// 			&-wrapper {
+// 				background-color: $gp-white;
+// 				padding: 15px;
+// 				border-radius: 100%;
+// 				position: absolute;
+// 				right: -80px;
+// 				top: 50%;
+// 				transform: translateY(-50%);
+// 			}
+// 		}
+
+// 		&__ornament {
+// 			position: absolute;
+// 			z-index: 3;
+// 			bottom: -20px;
+// 			right: 0;
+// 			transform: translateX(30%);
+// 			width: 340px;
+// 			height: auto;
+// 			object-fit: contain;
+// 			object-position: center;
+// 		}
+
+// 		&__bottom {
+// 			position: relative;
+// 			margin-top: -80px;
+
+// 			&::before {
+// 				position: absolute;
+// 				content: "";
+// 				width: 100vw;
+// 				height: 100%;
+// 				left: 50%;
+// 				transform: translateX(-50%);
+// 				z-index: -1;
+// 				background-color: $gp-orange;
+// 			}
+// 		}
+// 	}
+
+// }
 
 // Products listing element
 .cms-block-gp-product {

@@ -11,6 +11,10 @@
 	float: left;
 }
 
+body {
+	padding-top: 60px;
+}
+
 .header {
 	position: fixed;
 	top: 0;
@@ -116,6 +120,7 @@
 	ul {
 		list-style: none;
 		padding: 0;
+		margin: 0;
 	}
 }
 

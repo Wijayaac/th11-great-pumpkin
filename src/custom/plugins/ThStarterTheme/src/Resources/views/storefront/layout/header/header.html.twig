@@ -1,60 +1,20 @@
 {% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
 {% block layout_header %}
-{% block layout_top_bar %}
-	<div class="row align-items-center justify-content-end">
-		<div class="col-auto px-1">
-			<div class="account-menu">
-				{% sw_include '@Storefront/storefront/layout/header/actions/account-widget.html.twig' %}
-			</div>
-		</div>
-		<div class="col-auto px-1">
-			<div class="header-cart" data-offcanvas-cart="true">
-				<a class="btn header-cart-btn header-actions-btn" href="{{ path('frontend.checkout.cart.page') }}" data-cart-widget="true" title="{{ 'checkout.cartTitle'|trans|striptags }}" aria-label="{{ 'checkout.cartTitle'|trans|striptags }}">
-					{% sw_include '@Storefront/storefront/layout/header/actions/cart-widget.html.twig' %}
-				</a>
-			</div>
-		</div>
-	</div>
-{% endblock %}
-
-{# {% block layout_header_navigation %}
-		<div class="row align-items-center justify-content-between header-row">
-			{% block layout_header_logo %}
-				<div class="col-12 col-lg-auto header-logo-col">
-					{% sw_include '@Storefront/storefront/layout/header/logo.html.twig' %}
+{# cart icon #}
+{# {% block layout_top_bar %}
+		<div class="row align-items-center justify-content-end">
+			<div class="col-auto px-1">
+				<div class="account-menu">
+					{% sw_include '@Storefront/storefront/layout/header/actions/account-widget.html.twig' %}
 				</div>
-			{% endblock %}
-
-			{% block layout_header_actions %}
-				<div class="col-12 order-1 col-sm-auto order-sm-2 header-actions-col">
-					<div class="row no-gutters">
-						{% block layout_header_navigation_toggle %}
-							<div class="col d-sm-none">
-								<div class="menu-button">
-									{% block layout_header_navigation_toggle_button %}
-										<button class="btn nav-main-toggle-btn header-actions-btn" type="button" data-offcanvas-menu="true" aria-label="{{ "general.menuLink"|trans|striptags }}">
-											{% block layout_header_navigation_toggle_button_icon %}
-												{% sw_icon 'stack' %}
-											{% endblock %}
-										</button>
-									{% endblock %}
-								</div>
-							</div>
-						{% endblock %}
-
-						{% block layout_header_search_toggle %}
-							<div class="col-auto d-sm-none">
-								<div class="search-toggle">
-									<button class="btn header-actions-btn search-toggle-btn js-search-toggle-btn collapsed" type="button" data-toggle="collapse" data-target="#searchCollapse" aria-expanded="false" aria-controls="searchCollapse" aria-label="{{ "header.searchButton"|trans|striptags }}">
-										{% sw_icon 'search' %}
-									</button>
-								</div>
-							</div>
-						{% endblock %}
-						{% sw_include '@ThStarterTheme/storefront/layout/navigation/header.html.twig' %}
-					</div>
+			</div>
+			<div class="col-auto px-1">
+				<div class="header-cart" data-offcanvas-cart="true">
+					<a class="btn header-cart-btn header-actions-btn" href="{{ path('frontend.checkout.cart.page') }}" data-cart-widget="true" title="{{ 'checkout.cartTitle'|trans|striptags }}" aria-label="{{ 'checkout.cartTitle'|trans|striptags }}">
+						{% sw_include '@Storefront/storefront/layout/header/actions/cart-widget.html.twig' %}
+					</a>
 				</div>
-			{% endblock %}
+			</div>
 		</div>
 	{% endblock %} #}
 	<div class="header">
@@ -82,50 +42,42 @@
 			</button>
 			<nav class="nav" data-visible="false">
 				<ul class="header__nav">
-					<li class="nav__item">
-						<a href="index.html" class="nav__link">
-							Home
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="index.html" class="nav__link">
-							About
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="index.html" class="nav__link">
-							News
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="index.html" class="nav__link">
-							Grower Discount
-						</a>
-					</li>
-					<li class="nav__item">
-						<a href="index.html" class="nav__link">
-							Contact
-						</a>
-					</li>
-					<li class="nav__item nav__item--mobile">
+					{% for treeItem in page.header.navigation.tree %}
+						{% set category = treeItem.category %}
+						{% set name = category.translated.name %}
+						{% set categorId = category.id %}
+						<li class="nav__item {% if 'Shop' in name %} nav__item--mobile{% endif %}">
+							{% if 'Shop' in name %}
+								<a href="/" class="nav__link nav__link--cta">
+									<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewbox="0 0 19 20" fill="none">
+										<path d="M18.3081 5.24856C18.2136 4.29293 17.8366 3.3653 17.6058 2.4212C17.4557 1.80657 17.3249 1.18738 17.207 0.566587C17.1497 0.269087 17.0609 0.167064 16.7479 0.314647C16.0511 0.644336 15.3611 1.01388 14.6291 1.23625C13.2525 1.64765 11.9589 2.29796 10.8075 3.15747C11.1178 3.41614 11.2974 3.57322 11.2974 3.57322C11.2974 3.57322 15.8481 10.4776 14.3306 16.7162C14.3204 16.7554 14.3092 16.7934 14.2991 16.8326C14.4544 16.6983 14.5969 16.5498 14.7247 16.3891C17.2293 13.0975 18.7266 9.46732 18.3081 5.24856Z" fill="white"/>
+										<path d="M1.34619 12.9485C1.69773 14.4679 2.23625 15.9028 3.2246 17.1305C5.51437 19.9749 10.1334 19.7654 12.0332 16.7309C12.794 15.5161 12.9318 14.1591 12.7726 12.785C12.4264 9.81567 11.4466 7.06538 9.68468 4.62709C8.59213 3.0873 7.11977 1.85641 5.41073 1.05406C5.05919 0.888442 4.78994 0.549731 4.4758 0.299705C4.37429 0.2185 4.20547 0.0795953 4.15525 0.11165C4.04156 0.201957 3.95777 0.324478 3.91484 0.463184C3.76846 0.817922 3.7129 1.23463 3.49386 1.53167C0.942307 5.00106 0.434774 8.83907 1.34619 12.9485Z" fill="white"/>
+									</svg>
+									<span>{{ name }}</span>
+								</a>
+							{% else %}
+								<a class="nav__link main-navigation-link{% if categorId is same as(page.header.navigation.active.id) %} active{% endif %}{% if 'Shop' in name %} nav-link--cta{% endif %}" href="{% if category.translated.externalLink %}{{ category.translated.externalLink }}{% else %}{{ seoUrl('frontend.navigation.page', { navigationId: categorId }) }}{% endif %}" itemprop="url" {% if treeItem.children|length > 0 %} data-flyout-menu-trigger="{{ categorId }}" {% endif %} title="{{ name }}">
+									<span itemprop="name">{{ name }}</span>
+								</a>
+							{% endif %}
+						</li>
+					{% endfor %}
+				</ul>
+			</nav>
+			<nav class="nav--cta">
+				{% for treeItem in page.header.navigation.tree %}
+					{% set category = treeItem.category %}
+					{% set name = category.translated.name %}
+					{% if 'Shop' in name %}
 						<a href="/" class="nav__link nav__link--cta">
 							<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewbox="0 0 19 20" fill="none">
 								<path d="M18.3081 5.24856C18.2136 4.29293 17.8366 3.3653 17.6058 2.4212C17.4557 1.80657 17.3249 1.18738 17.207 0.566587C17.1497 0.269087 17.0609 0.167064 16.7479 0.314647C16.0511 0.644336 15.3611 1.01388 14.6291 1.23625C13.2525 1.64765 11.9589 2.29796 10.8075 3.15747C11.1178 3.41614 11.2974 3.57322 11.2974 3.57322C11.2974 3.57322 15.8481 10.4776 14.3306 16.7162C14.3204 16.7554 14.3092 16.7934 14.2991 16.8326C14.4544 16.6983 14.5969 16.5498 14.7247 16.3891C17.2293 13.0975 18.7266 9.46732 18.3081 5.24856Z" fill="white"/>
 								<path d="M1.34619 12.9485C1.69773 14.4679 2.23625 15.9028 3.2246 17.1305C5.51437 19.9749 10.1334 19.7654 12.0332 16.7309C12.794 15.5161 12.9318 14.1591 12.7726 12.785C12.4264 9.81567 11.4466 7.06538 9.68468 4.62709C8.59213 3.0873 7.11977 1.85641 5.41073 1.05406C5.05919 0.888442 4.78994 0.549731 4.4758 0.299705C4.37429 0.2185 4.20547 0.0795953 4.15525 0.11165C4.04156 0.201957 3.95777 0.324478 3.91484 0.463184C3.76846 0.817922 3.7129 1.23463 3.49386 1.53167C0.942307 5.00106 0.434774 8.83907 1.34619 12.9485Z" fill="white"/>
 							</svg>
-							<span>Shop the seed</span>
+							<span>{{name}}</span>
 						</a>
-					</li>
-				</ul>
-			</nav>
-			<nav class="nav--cta">
-				<a href="/" class="nav__link nav__link--cta">
-					<svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewbox="0 0 19 20" fill="none">
-						<path d="M18.3081 5.24856C18.2136 4.29293 17.8366 3.3653 17.6058 2.4212C17.4557 1.80657 17.3249 1.18738 17.207 0.566587C17.1497 0.269087 17.0609 0.167064 16.7479 0.314647C16.0511 0.644336 15.3611 1.01388 14.6291 1.23625C13.2525 1.64765 11.9589 2.29796 10.8075 3.15747C11.1178 3.41614 11.2974 3.57322 11.2974 3.57322C11.2974 3.57322 15.8481 10.4776 14.3306 16.7162C14.3204 16.7554 14.3092 16.7934 14.2991 16.8326C14.4544 16.6983 14.5969 16.5498 14.7247 16.3891C17.2293 13.0975 18.7266 9.46732 18.3081 5.24856Z" fill="white"/>
-						<path d="M1.34619 12.9485C1.69773 14.4679 2.23625 15.9028 3.2246 17.1305C5.51437 19.9749 10.1334 19.7654 12.0332 16.7309C12.794 15.5161 12.9318 14.1591 12.7726 12.785C12.4264 9.81567 11.4466 7.06538 9.68468 4.62709C8.59213 3.0873 7.11977 1.85641 5.41073 1.05406C5.05919 0.888442 4.78994 0.549731 4.4758 0.299705C4.37429 0.2185 4.20547 0.0795953 4.15525 0.11165C4.04156 0.201957 3.95777 0.324478 3.91484 0.463184C3.76846 0.817922 3.7129 1.23463 3.49386 1.53167C0.942307 5.00106 0.434774 8.83907 1.34619 12.9485Z" fill="white"/>
-					</svg>
-					<span>Shop the seed</span>
-				</a>
+					{% endif %}
+				{% endfor %}
 			</nav>
 		</div>
 	</div>

@@ -8,7 +8,9 @@
 	}
 
 	.container {
-		padding: 0 80px;
+		@media screen and (min-width: 992px) {
+			padding: 0 80px;
+		}
 	}
 
 	.h3 {
@@ -101,6 +103,7 @@
 
 		@media screen and (max-width: 992px) {
 			margin-top: 0px;
+			text-align: center;
 		}
 	}
 }

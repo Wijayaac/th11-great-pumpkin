@@ -1,6 +1,6 @@
 <div class="home-hero__container">
 	<div class="row">
-		<div class="col col-lg-6 home-hero__image-column" data-cms-element-id="{{ id }}">
+		<div class="col-12 col-lg-6 home-hero__image-column" data-cms-element-id="{{ id }}">
 			<div class="home-hero__image-wrapper">
 				{% set element = block.slots.getSlot('media') %}
 				{# Image #}
@@ -10,7 +10,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="col col-lg-6 home-hero__text-column" data-cms-element-id="{{ id }}">
+		<div class="col-12 col-lg-6 home-hero__text-column" data-cms-element-id="{{ id }}">
 			<div class="home-hero__text-wrapper">
 				{% set element = block.slots.getSlot('subtitle') %}
 				{# subtitle #}
