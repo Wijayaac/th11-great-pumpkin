@@ -171,6 +171,12 @@ body {
 	&__link {
 		color: #000;
 		text-decoration: none;
+		transition: color 0.3s ease-in-out;
+
+		&:hover {
+			text-emphasis: none;
+			color: $gp-orange;
+		}
 
 		&--cta {
 			display: flex;
@@ -186,6 +192,11 @@ body {
 			span {
 				margin: 0 4px;
 			}
+		}
+
+		&.active {
+			color: #FE8A14;
+			font-weight: 600;
 		}
 	}
 }

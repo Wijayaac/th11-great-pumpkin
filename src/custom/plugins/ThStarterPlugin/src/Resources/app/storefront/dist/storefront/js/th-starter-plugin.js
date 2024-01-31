@@ -1,1 +1,1 @@
-(self.webpackChunk=self.webpackChunk||[]).push([["th-starter-plugin"],{2719:()=>{}},e=>{var s;s=2719,e(e.s=s)}]);
+(self.webpackChunk=self.webpackChunk||[]).push([["th-starter-plugin"],{2719:()=>{window.addEventListener("DOMContentLoaded",(()=>{document.querySelector("#player")&&new Plyr("#player",{hideControls:!0,muted:!0}),document.querySelector(".news-page")&&document.body.classList.add("page--news")}))}},e=>{var n;n=2719,e(e.s=n)}]);
