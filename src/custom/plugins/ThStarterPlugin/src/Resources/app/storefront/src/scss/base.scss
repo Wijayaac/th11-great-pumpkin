@@ -15,6 +15,7 @@ $gp-heading-font: 'Poppins', sans-serif;
 @import 'components/home-hero';
 @import 'components/article';
 @import 'components/video';
+@import 'components/company-discount';
 
 // global
 .container-main {
@@ -29,7 +30,7 @@ button {
 // Arrow down component
 .arrow-down {
 	&--white {
-		color: white;
+		color: $gp-white;
 	}
 
 	&--orange {
