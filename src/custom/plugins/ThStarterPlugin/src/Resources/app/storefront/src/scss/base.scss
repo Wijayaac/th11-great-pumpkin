@@ -16,6 +16,8 @@ $gp-heading-font: 'Poppins', sans-serif;
 @import 'components/article';
 @import 'components/video';
 @import 'components/company-discount';
+@import 'components/affiliate-voucher';
+@import 'components/text-media';
 
 // global
 .container-main {
@@ -25,6 +27,28 @@ $gp-heading-font: 'Poppins', sans-serif;
 button {
 	outline: none;
 	border: none;
+}
+
+.gp-btn {
+	border-radius: 45px;
+	background-color: $gp-orange;
+	padding: 7px 15px;
+	min-width: 80px;
+
+	color: $gp-white;
+	text-align: center;
+	font-family: $gp-heading-font;
+	font-size: 15px;
+	font-weight: 600;
+	line-height: 100.636%;
+	letter-spacing: -0.45px;
+	text-transform: uppercase;
+
+	&:hover {
+		text-decoration: none;
+		color: $gp-white;
+		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
+	}
 }
 
 // Arrow down component

@@ -1,0 +1,51 @@
+.gp-tm {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	position: relative;
+
+	.affiliate-page & {
+		@media screen and (min-width: 992px) {
+			min-height: 650px;
+		}
+
+		@media screen and (min-width: 1440px) {
+			max-width: 1440px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.cms-element-image .cms-image-container {
+			img {
+				width: 800px;
+			}
+		}
+
+		@media screen and (min-width: 992px) {
+			.gp-tm__text {
+				padding-right: 40px;
+			}
+		}
+	}
+
+	.container {
+		@media screen and (min-width: 992px) {
+			padding: 0 80px;
+		}
+	}
+
+	&__text {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__image {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		img {
+			object-fit: contain;
+			object-position: center;
+		}
+	}
+}
