@@ -13,6 +13,7 @@ $gp-heading-font: 'Poppins', sans-serif;
 @import 'components/share-badge';
 
 @import 'components/home-hero';
+@import 'components/gp-products';
 @import 'components/article';
 @import 'components/video';
 @import 'components/company-discount';
@@ -23,11 +24,22 @@ $gp-heading-font: 'Poppins', sans-serif;
 // global
 .container-main {
 	padding-bottom: 0;
+
+	.breadcrumb.cms-breadcrumb.container {
+		display: none;
+	}
 }
+
 
 button {
 	outline: none;
 	border: none;
+}
+
+a,
+a:hover {
+	color: black;
+	text-decoration: none;
 }
 
 .gp-btn {
@@ -222,130 +234,6 @@ button {
 
 // }
 
-// Products listing element
-.cms-block-gp-product {
-	background: $gp-orange;
-}
-
-.gp-products__lists {
-	max-width: 1440px;
-	padding: 0 40px;
-	margin: 0 auto;
-}
-
-.gp-products__item-link,
-.gp-products__item-link:hover {
-	color: black;
-	text-decoration: none;
-}
-
-.gp-products__item-wrapper {
-	max-width: 80%;
-	background: white;
-	padding-left: 28px;
-	padding-right: 28px;
-	padding-top: 30px;
-	padding-bottom: 120px;
-	margin: 0 auto;
-	position: relative;
-	min-height: 250px;
-	border-radius: 19px;
-}
-
-.gp-products__item-grid {
-	display: flex;
-	justify-content: space-between;
-}
-
-.gp-products__item-name {
-	color: #000;
-	font-family: Poppins;
-	font-size: 25px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 100.636%;
-	/* 25.159px */
-	letter-spacing: -0.75px;
-	margin-bottom: 8px;
-}
-
-.gp-products__item-detail {
-	color: #ACABAB;
-	font-family: Poppins;
-	font-size: 15px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 100.636%;
-	/* 15.095px */
-	letter-spacing: -0.45px;
-}
-
-.gp-products__item-price {
-	color: #8A8888;
-	font-family: Poppins;
-	font-size: 20px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 100.636%;
-	/* 20.127px */
-	letter-spacing: -0.6px;
-}
-
-.gp-products__item-button {
-	color: #FFF;
-	font-family: Poppins;
-	font-size: 15px;
-	font-style: normal;
-	font-weight: 600;
-	line-height: 100.636%;
-	/* 15.095px */
-	letter-spacing: -0.45px;
-	text-transform: uppercase;
-
-	// button{
-	background-color: $gp-orange;
-	border-radius: 25px;
-	padding: 8px;
-	outline: none;
-	border: none;
-
-}
-
-.gp-products__item-image {
-	position: relative;
-	width: 100%;
-	margin-top: -120px;
-}
-
-.gp-products__item-image img {
-	margin: 0 auto;
-}
-
-.gp-products__item-stock {
-	position: absolute;
-	z-index: 1;
-	top: -40px;
-	right: 35px;
-	width: 70px;
-	height: 70px;
-	padding: 10px 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	background-color: $gp-dark;
-	color: $gp-white;
-	text-align: center;
-	font-family: Poppins;
-	font-size: 13px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 100.636%;
-	/* 13.083px */
-	letter-spacing: -0.39px;
-	border-radius: 100%;
-
-}
 
 // Image text reversed
 .image-text-reversed {

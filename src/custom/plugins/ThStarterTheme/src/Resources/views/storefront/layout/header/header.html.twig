@@ -1,7 +1,7 @@
 {% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
 {% block layout_header %}
-{# cart icon #}
-{# {% block layout_top_bar %}
+	{# cart icon #}
+	{% block layout_top_bar %}
 		<div class="row align-items-center justify-content-end">
 			<div class="col-auto px-1">
 				<div class="account-menu">
@@ -16,10 +16,12 @@
 				</div>
 			</div>
 		</div>
-	{% endblock %} #}
+	{% endblock %}
 	<div class="header">
 		<div class="header__wrapper container">
-			<div class="header__logo"><img src="{{ asset('bundles/thstarterplugin/logo-header.png', 'asset') }}" alt="logo header"></div>
+			<div class="header__logo">
+				<a href="/"><img src="{{ asset('bundles/thstarterplugin/logo-header.png', 'asset') }}" alt="logo header"></a>
+			</div>
 			<button class="header__toggle" aria-controls="header__nav" aria-expanded="false">
 				<span class="sr-only">Menu</span>
 				<span class="open">
