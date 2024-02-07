@@ -1,3 +1,4 @@
+@import 'base/font';
 // // TODO: create a new file for the vairables
 // $theme-orange: #f97231;
 // $theme-gray: #3c3b3b;
@@ -88,3 +89,7 @@
 
 
 // }
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
