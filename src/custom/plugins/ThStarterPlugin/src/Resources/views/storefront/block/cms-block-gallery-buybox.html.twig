@@ -22,7 +22,10 @@
 			class="col-lg-6 product-detail-buy" data-cms-element-id="{{ element.id }}">
 			{# Product name #}
 			<div class="gp-pdp__name">
-				<h1>{{page.product.name}}</h1>
+				<h1>{{product.name}}</h1>
+				{% if product.name|lower != 'consultation service' %}
+					<h2 class="h4">2,749 Gienger-2365 Wolf x sibbed(2365 Wolf,Godzilla)</h2>
+				{% endif %}
 			</div>
 			{# product price #}
 			<div class="gp-pdp__price">
@@ -32,19 +35,19 @@
 					</div>
 				{% endblock %}
 			</div>
-			{# product description #}
-			<div class="gp-pdp__description">
-				<div class="gp-pdp__description-content {{ page.product.description|length > 150 ? 'is-toggled': ''}}">
-					<p>{{ page.product.description|nl2br }}</p>
-				</div>
-				{% if page.product.description|length > 150 %}
-					<button class="gp-pdp__description-toggle">SHOW MORE</button>
-				{% endif %}
-			</div>
 			<div class="gp-pdp__origin">
 				{% block block_gallery_buybox_column_right_inner %}
 					{% sw_include '@Storefront/storefront/element/cms-element-' ~ element.type ~ '.html.twig' ignore missing %}
 				{% endblock %}
+			</div>
+			{# product description #}
+			<div class="gp-pdp__description">
+				<div class="gp-pdp__description-content {{ page.product.description|length > 150 ? 'is-toggled': ''}}">
+					<p>{{ product.description|nl2br }}</p>
+				</div>
+				{% if product.description|length > 150 %}
+					<button class="gp-pdp__description-toggle">SHOW MORE</button>
+				{% endif %}
 			</div>
 		</div>
 	{% endblock %}
