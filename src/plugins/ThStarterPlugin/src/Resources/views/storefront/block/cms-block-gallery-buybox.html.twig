@@ -23,8 +23,10 @@
 			{# Product name #}
 			<div class="gp-pdp__name">
 				<h1>{{product.name}}</h1>
-				{% if product.name|lower != 'consultation service' %}
-					<h2 class="h4">2,749 Gienger-2365 Wolf x sibbed(2365 Wolf,Godzilla)</h2>
+				{% if product.translated.customFields.custom_product_meta_subtitle is not empty %}
+					<h2 class="h4">
+						{{ product.translated.customFields.custom_product_meta_subtitle }}
+					</h2>
 				{% endif %}
 			</div>
 			{# product price #}

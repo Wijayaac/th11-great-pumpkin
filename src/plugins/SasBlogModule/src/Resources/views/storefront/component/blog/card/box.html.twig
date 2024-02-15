@@ -1,5 +1,5 @@
 {% block sas_blog_card %}
-    <article class="card blog-card">
+    <article class="card blog-card gp-article">
         {% block sas_blog_card_teaser_image %}
             <a href="{{ seoUrl('sas.frontend.blog.detail', {'articleId': article.id}) }}"
                    title="{{ article.translated.title }}"
@@ -53,6 +53,7 @@
                 {% block sas_blog_card_teaser %}
                     <p class="card-text font-size-small mb-0">{{ article.translated.teaser }}</p>
                 {% endblock %}
+								<a class="gp-article__link" href="{{ seoUrl('sas.frontend.blog.detail', {'articleId': article.id}) }}">view more</a>
             </div>
         {% endblock %}
 

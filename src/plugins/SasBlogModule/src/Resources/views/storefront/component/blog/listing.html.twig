@@ -11,13 +11,13 @@
 } %}
 
 {% block sas_blog_listing %}
-    <div class="cms-element-product-listing-wrapper"
+    <div class="cms-element-product-listing-wrapper gp-news"
          data-listing-pagination="true"
          data-listing-pagination-options='{{ paginationConfig }}'
          data-listing="true"
          data-listing-options='{{ listingPagination|json_encode }}'>
 
-        <div class="cms-element-product-listing">
+        <div class="cms-element-product-listing gp-news__wrapper">
             {% if searchResult.total > 0 %}
                 <div class="cms-element-sas-blog-listing-actions row justify-content-between">
                     {% block sas_block_pagination %}
@@ -38,7 +38,7 @@
                             <div class="row">
                                 {% for article in searchResult %}
                                     {% block sas_element_blog_listing_box %}
-                                        <div class="col-12 col-md-4 col-lg-3 my-4">
+                                        <div class="col-12 col-md-6 col-lg-4 my-4">
                                             {% sw_include '@Storefront/storefront/component/blog/card/box.html.twig' %}
                                         </div>
                                     {% endblock %}
@@ -59,7 +59,7 @@
                     {% endif %}
                 </div>
             {% endblock %}
-
+						<img src="/ornament.png" alt="" class="gp-news__ornament">
         </div>
     </div>
 {% endblock %}
