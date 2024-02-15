@@ -14,7 +14,9 @@ services:
       - "3306:3306" # mysql port
     volumes:
       - "db_volume:/var/lib/mysql"
-      - "./src:/var/www/html"
+      - "./src/plugins/SasBlogModule:/var/www/html/custom/plugins/SasBlogModule"
+      - "./src/plugins/ThStarterTheme:/var/www/html/custom/plugins/ThStarterTheme"
+      - "./src/plugins/ThStarterPlugin:/var/www/html/custom/plugins/ThStarterPlugin"
     networks:
       - web
     environment:
