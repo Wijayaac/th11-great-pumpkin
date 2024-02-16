@@ -3,10 +3,6 @@
   z-index: 2;
   overflow: hidden;
 
-  &-filter {
-    display: none;
-  }
-
   &__wrapper {
     @media screen and (min-width: 992px) {
       padding-left: 40px;

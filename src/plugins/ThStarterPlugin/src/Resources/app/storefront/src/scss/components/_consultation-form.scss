@@ -6,6 +6,12 @@
     @media screen and (min-width: 992px) {
       padding: 0 60px;
     }
+    @media screen and (max-width: 768px) {
+      padding: 0 25px;
+    }
+    @media screen and (max-width: 1140px) {
+      padding: 0 45px;
+    }
   }
 
   .arrow-down {
@@ -47,6 +53,10 @@
       background-color: #ff8145;
       color: $gp-white;
       width: max-content;
+
+      @media screen and (max-width: 992px) {
+        width: 100%;
+      }
     }
     input,
     textarea {

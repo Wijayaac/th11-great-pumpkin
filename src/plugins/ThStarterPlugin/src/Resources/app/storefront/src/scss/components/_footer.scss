@@ -17,6 +17,12 @@
   .h3 {
     color: inherit;
   }
+  &__top {
+    @media screen and (max-width: 991px) {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+  }
 
   &__logo {
     flex: 0 0 20%;
@@ -29,6 +35,9 @@
       width: 120px;
       height: auto;
       object-fit: contain;
+      @media screen and (max-width: 991px) {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -39,6 +48,9 @@
 
     @media screen and (max-width: 576px) {
       flex: 0 0 100%;
+      margin: 0 auto;
+      padding-left: 0;
+      text-align: center;
     }
 
     .h3 {
