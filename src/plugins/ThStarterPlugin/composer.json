@@ -2,7 +2,7 @@
   "name": "th-starter-plugin/th-starter-plugin",
   "description": "Skeleton plugin",
   "type": "shopware-platform-plugin",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "license": "MIT",
   "require": {
     "shopware/core": "6.5.*"
