@@ -269,10 +269,5 @@
         font-size: 20px;
       }
     }
-    .col-md-6 {
-      @media screen and (max-width: 991px) {
-        flex: 0 0 100%;
-      }
-    }
   }
 }

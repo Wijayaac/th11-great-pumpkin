@@ -73,6 +73,8 @@ a:hover {
 .btn-primary {
   --bs-btn-bg: #f97231;
   --bs-btn-border-color: #f97231;
+  --bs-btn-hover-bg: #f97231;
+  --bs-btn-hover-border-color: #f97231;
 }
 
 // Arrow down component
@@ -303,6 +305,17 @@ a:hover {
   .content-main {
     @media screen and (max-width: 991px) {
       padding-bottom: 40px;
+    }
+  }
+}
+
+.is-ctl-checkout {
+  .content-main {
+    padding-left: 30px;
+    padding-right: 30px;
+    @media screen and (max-width: 991px) {
+      padding-left: 20px;
+      padding-right: 20px;
     }
   }
 }
