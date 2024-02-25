@@ -35,7 +35,7 @@ function contactFormSubmit() {
     // form submit
     const formData = new FormData(form);
 
-    fetch("http://localhost:81/index.php", {
+    fetch("https://shopware.blackhole.my.id/index.php", {
       method: "POST",
       body: formData,
     })
@@ -88,7 +88,7 @@ function consultationFormSubmit() {
     // form submit
     const formData = new FormData(form);
 
-    fetch("http://localhost:81/consultation.php", {
+    fetch("https://shopware.blackhole.my.id/consultation.php", {
       method: "POST",
       body: formData,
     })

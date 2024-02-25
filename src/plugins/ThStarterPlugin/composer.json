@@ -1,8 +1,8 @@
 {
   "name": "th-starter-plugin/th-starter-plugin",
-  "description": "Skeleton plugin",
+  "description": "Think11 Starter Plugins",
   "type": "shopware-platform-plugin",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "require": {
     "shopware/core": "6.5.*"
@@ -10,8 +10,8 @@
   "extra": {
     "shopware-plugin-class": "ThStarterPlugin\\ThStarterPlugin",
     "label": {
-      "de-DE": "Skeleton plugin",
-      "en-GB": "Skeleton plugin"
+      "de-DE": "Think11 Starter Plugins",
+      "en-GB": "Think11 Starter Plugins"
     }
   },
   "autoload": {
