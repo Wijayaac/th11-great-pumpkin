@@ -21,13 +21,14 @@
     @media screen and (max-width: 991px) {
       flex-wrap: wrap;
       text-align: center;
+      justify-content: center;
     }
   }
 
   &__logo {
     flex: 0 0 20%;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 991px) {
       flex: 0 0 100%;
     }
 
@@ -46,7 +47,7 @@
     padding-left: 20px;
     max-width: 320px;
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 991px) {
       flex: 0 0 100%;
       margin: 0 auto;
       padding-left: 0;
@@ -100,9 +101,9 @@
       margin: 0 20px;
       a {
         color: #fff;
-				&:hover{
-					color: $gp-orange;
-				}
+        &:hover {
+          color: $gp-orange;
+        }
       }
 
       @media screen and (max-width: 991px) {

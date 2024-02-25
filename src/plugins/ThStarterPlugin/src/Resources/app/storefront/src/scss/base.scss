@@ -25,6 +25,9 @@ $gp-heading-font: "Poppins", sans-serif;
 @import "components/consultation-form";
 
 // global
+body {
+  font-family: "Poppins", sans-serif;
+}
 .container-main {
   padding-bottom: 0;
 
@@ -68,8 +71,8 @@ a:hover {
 }
 
 .btn-primary {
-  --bs-btn-bg: $gp-orange;
-  --bs-btn-border-color: $gp-orange;
+  --bs-btn-bg: #f97231;
+  --bs-btn-border-color: #f97231;
 }
 
 // Arrow down component
@@ -291,5 +294,15 @@ a:hover {
     object-fit: cover;
     object-position: center;
     width: 100%;
+  }
+}
+
+// 404 page
+.is-ctl-error,
+.is-act-error {
+  .content-main {
+    @media screen and (max-width: 991px) {
+      padding-bottom: 40px;
+    }
   }
 }
