@@ -137,6 +137,38 @@
 					{% endif %}
 				</div>
 			</div>
+			<div class="col-12 col-md-6 col-lg-3">
+				<div class="gp-affiliate__item">
+					{% set element = block.slots.getSlot('ninth-image') %}
+					{% if element %}
+						<div data-cms-element-id="{{ element.id }}" class="gp-affiliate__item-image">
+							{% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+						</div>
+					{% endif %}
+					{% set element = block.slots.getSlot('ninth-text') %}
+					{% if element %}
+						<div data-cms-element-id="{{ element.id }}">
+							{% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
+			<div class="col-12 col-md-6 col-lg-3">
+				<div class="gp-affiliate__item">
+					{% set element = block.slots.getSlot('ten-image') %}
+					{% if element %}
+						<div data-cms-element-id="{{ element.id }}" class="gp-affiliate__item-image">
+							{% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+						</div>
+					{% endif %}
+					{% set element = block.slots.getSlot('ten-text') %}
+					{% if element %}
+						<div data-cms-element-id="{{ element.id }}">
+							{% sw_include "@Storefront/storefront/element/cms-element-" ~ element.type ~ ".html.twig" ignore missing %}
+						</div>
+					{% endif %}
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

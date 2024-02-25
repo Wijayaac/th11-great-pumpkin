@@ -113,11 +113,6 @@
   &__field {
     display: flex;
     flex-direction: column;
-    margin-bottom: 24px;
-
-    @media screen and (max-width: 991px) {
-      margin-bottom: 8px;
-    }
 
     .error-message {
       opacity: 0;

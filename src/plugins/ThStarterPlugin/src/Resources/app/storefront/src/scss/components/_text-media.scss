@@ -2,6 +2,10 @@
   padding-top: 80px;
   padding-bottom: 80px;
   position: relative;
+  &__wrapper {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
 
   .affiliate-page & {
     @media screen and (min-width: 992px) {
@@ -34,9 +38,9 @@
         padding-right: 40px;
       }
       h1 {
-        font-size: 60px;
+        font-size: 56px;
         font-weight: 600;
-        line-height: 72px;
+        line-height: 60px;
         letter-spacing: -0.04em;
         color: #f97231;
         @media screen and (max-width: 991px) {
@@ -45,9 +49,9 @@
         }
       }
       p {
-        font-size: 36px;
+        font-size: 34px;
         font-weight: 500;
-        line-height: 58px;
+        line-height: 50px;
         letter-spacing: -0.04em;
         @media screen and (max-width: 991px) {
           font-size: 20px;
@@ -89,17 +93,17 @@
     z-index: 2;
 
     h1 {
-      font-size: 28px;
+      font-size: 24px;
 
       span {
-        font-size: 36px;
+        font-size: 32px;
       }
 
       @media screen and (min-width: 992px) {
-        font-size: 38px;
+        font-size: 36px;
 
         span {
-          font-size: 56px;
+          font-size: 44px;
         }
       }
     }

@@ -98,6 +98,12 @@
       width: 30px;
       height: auto;
       margin: 0 20px;
+      a {
+        color: #fff;
+				&:hover{
+					color: $gp-orange;
+				}
+      }
 
       @media screen and (max-width: 991px) {
         margin-bottom: 16px;

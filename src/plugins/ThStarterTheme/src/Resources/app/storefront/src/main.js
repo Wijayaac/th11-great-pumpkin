@@ -47,6 +47,6 @@ function socialMediaShare() {
 
 window.addEventListener("DOMContentLoaded", () => {
   headerNavigation();
-  socialMediaShare();
+  // TODO: currently still don't know if the socialMediaShare function is needed
+  // socialMediaShare();
 });
-console.log("testtt");

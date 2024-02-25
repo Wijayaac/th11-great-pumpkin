@@ -67,6 +67,11 @@ a:hover {
   }
 }
 
+.btn-primary {
+  --bs-btn-bg: $gp-orange;
+  --bs-btn-border-color: $gp-orange;
+}
+
 // Arrow down component
 .arrow-down {
   &--white {
